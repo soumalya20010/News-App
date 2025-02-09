@@ -77,7 +77,7 @@ const News = (props) => {
         hasMore={articles.length !== totalResults}
         loader={<Spinner />}
       >
-        <div className="row">
+      <div className="row">
           {Array.isArray(articles) && articles.map((article, index) => (
             <div className="col-md-4" key={index}>
               <div className="card">
