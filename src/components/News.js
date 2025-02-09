@@ -15,7 +15,9 @@ const News = (props) => {
 
   const getApiUrl = () => {
     if (props.apiKey === process.env.REACT_APP_INDIA) {
-      return `https://newsdata.io/api/1/latest?apikey=${props.apiKey}&q=india`;
+      // return `https://newsdata.io/api/1/latest?apikey=${props.apiKey}&q=india`;
+     
+     return `https://newsdata.io/api/1/news?apikey=${props.apiKey}&q=${props.category}`;
     } else {
       return `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     }
